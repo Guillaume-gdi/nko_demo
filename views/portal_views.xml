@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_subscriptions" inherit_id="sale_subscription.portal_my_subscriptions" name="Miriale - My Subscriptions">
+        <xpath expr="//tr/th[@class='text-center' and contains(text(), 'Status')]" position="after">
+            <th class="text-center">Action</th>
+        </xpath>
+        <xpath expr="//tr/td[@class='text-center' and @id='subscription_state']" position="after">
+            <td class="text-center">
+                <button type="button" class="btn btn-primary pause_sub_button" t-att-data-id="sale_order.id">Pause</button>
+            </td>
+        </xpath>
+    </template>
+</odoo>
